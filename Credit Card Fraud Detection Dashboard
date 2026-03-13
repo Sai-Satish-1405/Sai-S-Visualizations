@@ -1,0 +1,21 @@
+Credit Card Fraud Detection Dashboard
+
+Fraudulent credit card transactions cost banks and customers billions annually, and early detection is key. This Tableau dashboard analyzes over 19,000 credit card transactions to uncover patterns of fraud using a cleaned and transformed dataset, enabling institutions to act swiftly and confidently.
+
+The dataset includes transaction-level details such as amount, time, chip usage, merchant type, MCC category, and geographic metadata. Irrelevant or high-cardinality columns like user ID, merchant name, and ZIP code were dropped. Features were binned and engineered (e.g., time periods, amount ranges, merchant location groupings) to improve visualization and model interpretability.
+
+The dashboard may include:
+
+Fraud Trend Explorer: Visual breakdown of fraudulent vs. legitimate transactions by amount range, time of day, chip usage, and merchant type.
+
+Geographic Patterns: Visual clustering of fraud-prone merchant states and grouped MCC categories.
+
+Behavioral Insights: Charts reveal when and where fraud tends to occur, aiding risk strategy.
+
+Correlational Analysis: Visuals to examine relationships between features and the likelihood of fraud.
+
+For predictive modeling, the dataset was exported to Python. After data balancing and encoding, Logistic Regression and KNN classifiers were trained. The best model achieved 89% accuracy with strong recall, indicating good fraud detection ability, albeit with some false positives. This data science project allows analysts to not just visualize transaction data but also take the first steps toward predictive analysis using Machine Learning.
+
+Project Link: Credit Card Fraud Detection Project 
+
+Access Data Science and Machine Learning Project Code Examples

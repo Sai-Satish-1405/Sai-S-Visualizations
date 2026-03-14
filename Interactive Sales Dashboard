@@ -1,0 +1,61 @@
+This is a comprehensive file designed for a professional GitHub repository. It details the business requirements, technical architecture, and analytical insights covered in the end-to-end Tableau project.
+
+---
+
+```markdown
+# Tableau End-to-End Project: Sales & Customer Performance Analysis
+
+## Project Overview
+This project involves creating a comprehensive Business Intelligence solution using Tableau. It follows a professional project lifecycle—from requirement analysis and data modeling to the design of high-fidelity interactive dashboards. The goal is to provide stakeholders with actionable insights into year-over-year (YoY) sales performance and customer purchasing behavior.
+
+## Business Requirements (User Stories)
+
+### 1. Sales Dashboard
+**Objective:** Provide an overview of key sales metrics and trends to analyze YoY performance.
+* **Key Metrics (KPIs):** Display total Sales, Profit, and Quantity for the current year compared to the previous year.
+* **Sales Trends:** Visualize monthly performance of KPIs to identify seasonal peaks and troughs.
+* **Product Comparison:** Compare sales and profit by product sub-category against the previous year.
+* **Weekly Performance:** Analyze weekly sales and profit trends relative to an average benchmark.
+
+### 2. Customer Dashboard
+**Objective:** Analyze customer segments and identify high-value contributors.
+* **Customer Metrics:** Track the total number of unique customers, sales per customer, and total orders.
+* **Distribution Analysis:** Visualize the distribution of customers based on the number of orders placed (Histogram).
+* **Top Performers:** Identify the Top 10 customers by profit, including their total sales and last order date.
+
+### 3. Interactivity & Design
+* **Dynamic Time-Travel:** Users must be able to select any year as the "Current Year" via parameters.
+* **Navigation:** Seamless switching between Sales and Customer dashboards using custom icons.
+* **Filtering:** Global filters for Category, Sub-Category, Region, State, and City.
+* **Collapsible Filter Pane:** A clean UI approach using a show/hide container for all dashboard filters.
+
+## Data Model & Architecture
+The project utilizes a **Star Schema** to ensure optimal performance and scalability within Tableau. 
+
+* **Fact Table:** `Orders` (Contains transactional data, dates, and measures).
+* **Dimension Tables:** `Customers`, `Products`, and `Locations`.
+* **Join Logic:** Relationship-based joins on unique identifiers (Customer ID, Product ID, Postal Code).
+
+## Technical Implementation Details
+
+### Calculated Fields & Logic
+* **YoY Growth:** Created dynamic calculations to isolate Current Year (CY) vs. Previous Year (PY) metrics based on user selection.
+* **KPI Indicators:** Logic-based symbols (Arrows) indicating positive or negative growth compared to the previous period.
+* **LOD Expressions:** Used `FIXED` Level of Detail expressions to calculate the number of orders per customer for the distribution histogram.
+* **Sparklines:** Combined dual-axis charts to show trends with highlighted Max/Min data points.
+
+### Dashboard Design Principles
+* **Container-Based Layout:** Utilized nested Horizontal and Vertical containers to maintain a precise and responsive layout.
+* **Consistency:** Applied a unified color palette (Dark Gray for CY, Light Gray for PY, Turquoise for Profit, and Orange for Loss).
+* **Formatting:** Standardized inner and outer padding (10px/7px) to create white space and improve readability.
+
+## How to Use
+1. **Year Selection:** Use the filter icon on the top right to open the sidebar and select the analysis year.
+2. **Interactive Filtering:** Click on any sub-category bar or trend point to filter the entire dashboard by that specific dimension.
+3. **Navigation:** Use the sidebar buttons to toggle between the Sales and Customer views.
+
+## Tools Used
+* **Tableau Desktop / Tableau Public**
+* **Data Source:** Retail Sales CSV (Relational Data)
+
+```
